@@ -1,0 +1,603 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::-moz-selection {
+  background: none;
+}
+
+::selection {
+  background: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #405de6;
+  border-radius: 5px;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  height: 100%;
+  position: relative;
+}
+.container .first-login-page {
+  width: 100%;
+  height: 100%;
+  background-color: #FAFAFA;
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  transition: 3s ease;
+  z-index: 4;
+}
+.container .first-login-page .login-page-data {
+  text-align: center;
+}
+.container .first-login-page .login-page-data .insta-logo {
+  width: 120px;
+  margin-bottom: 40px;
+}
+.container .first-login-page .first-page-fields {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  z-index: 3;
+  position: relative;
+  border-radius: 5px;
+}
+.container .first-login-page .first-page-fields input {
+  padding: 12px 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(228, 228, 228);
+  background-color: rgb(247, 244, 244);
+  background-color: white;
+  margin-bottom: 10px;
+  outline: none;
+}
+.container .first-login-page .first-page-fields input:focus {
+  outline: 2px solid #3897F0;
+  border: 1px solid transparent;
+}
+.container .first-login-page .first-page-fields .login-btn {
+  padding: 12px;
+  background-color: #3897F0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+.container .first-login-page .top-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.container .first-login-page .top-toggle .toggle-icon {
+  position: relative;
+  z-index: 4;
+}
+.container .first-login-page .top-toggle .toggle-icon i {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s ease;
+}
+.container .first-login-page .top-toggle .toggle-icon.active i {
+  color: #4B57E1;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 5px;
+}
+.container .first-login-page .top-toggle .login-details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: white;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.5s ease-in-out;
+  z-index: 3;
+  text-align: right;
+}
+.container .first-login-page .top-toggle .login-details p {
+  font-size: 14px;
+}
+.container .first-login-page .top-toggle .login-details.active {
+  right: 40px;
+  visibility: visible;
+  opacity: 1;
+}
+.container .first-login-page .images-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.container .first-login-page .images-box img {
+  width: 100px;
+  height: 130px;
+  border: 10px solid white;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%) rotate(10deg);
+}
+.container .first-login-page .images-box img:nth-child(n+1) {
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+.container .first-login-page .images-box img:nth-child(2n+1) {
+  transform: translate(-50%, -50%) rotate(10deg);
+}
+.container .first-login-page.active {
+  transform: translateX(-110%);
+}
+.container .second-page {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container .second-page .second-page-data {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.container .second-page .second-page-data .second-page-data-row {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  display: none;
+}
+.container .second-page .second-page-data .second-page-data-row .trigger-features.home-section {
+  padding: 20px;
+  position: relative;
+}
+.container .second-page .second-page-data .second-page-data-row .trigger-features.home-section .black-logo {
+  width: 120px;
+  position: relative;
+  z-index: 2;
+}
+.container .second-page .second-page-data .second-page-data-row .trigger-features.home-section .story-swiper .swiper-slide {
+  margin-top: 10px;
+}
+.container .second-page .second-page-data .second-page-data-row .trigger-features.home-section .story-swiper .swiper-slide img {
+  width: 70px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #4A57E1;
+  padding: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  scale: 0.95;
+}
+.container .second-page .second-page-data .second-page-data-row .trigger-features.home-section .story-swiper .swiper-slide img.active {
+  border: 3px solid crimson;
+  scale: 1.01;
+}
+.container .second-page .second-page-data .second-page-data-row .story-show {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.container .second-page .second-page-data .second-page-data-row .story-show .cut {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.container .second-page .second-page-data .second-page-data-row .story-show .cut i {
+  font-size: 40px;
+  transform: rotate(45deg);
+  color: crimson;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.3));
+  color: white;
+}
+.container .second-page .second-page-data .second-page-data-row .story-show h3 {
+  margin-top: 150px;
+  text-align: center;
+  transform: rotate(-10deg);
+  background-color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  width: 80%;
+  color: white;
+  box-shadow: 5px 5px 0 rgb(228, 228, 228);
+}
+.container .second-page .second-page-data .second-page-data-row .home-main-data {
+  padding: 5px 25px;
+  margin-top: 15px;
+}
+.container .second-page .second-page-data .second-page-data-row .home-main-data .home-main-cover {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.container .second-page .second-page-data .second-page-data-row .home-main-data .home-main-cover .profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .second-page .second-page-data .second-page-data-row .home-main-data .home-img-display {
+  width: 100%;
+  margin-top: 10px;
+}
+.container .second-page .second-page-data .second-page-data-row .home-main-data .home-img-display img {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .second-page .second-page-data .second-page-data-row .home-main-data .home-img-display .likings {
+  margin-top: 10px;
+}
+.container .second-page .second-page-data .second-page-data-row .home-main-data .home-img-display .likings i {
+  font-size: 28px;
+  margin-right: 7px;
+}
+.container .second-page .second-page-data .second-page-data-row .home-main-data .home-img-display .likedBy {
+  margin-top: 10px;
+}
+.container .second-page .second-page-data .second-page-data-row .home-main-data .home-img-display .likedBy small {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+}
+.container .second-page .second-page-data .second-page-data-row .search-section {
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+}
+.container .second-page .second-page-data .second-page-data-row .search-section .search-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 35px;
+  background-color: rgb(247, 244, 244);
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.144);
+  background-color: white;
+  padding: 5px;
+  pointer-events: none;
+}
+.container .second-page .second-page-data .second-page-data-row .search-section .search-input input {
+  width: 100%;
+  padding: 12px 10px;
+  outline: none;
+  border: none;
+  border-radius: 35px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(43, 43, 43);
+}
+.container .second-page .second-page-data .second-page-data-row .search-section .search-input .search-btn {
+  width: 45px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #3897F0;
+  cursor: pointer;
+}
+.container .second-page .second-page-data .second-page-data-row .search-section .search-input .search-btn i {
+  font-size: 20px;
+  color: white;
+}
+.container .second-page .second-page-data .second-page-data-row .search-section .grid-search {
+  margin-top: 20px;
+  width: 100%;
+  -moz-columns: 2;
+       columns: 2;
+  gap: 10px;
+  padding-bottom: 150px;
+}
+.container .second-page .second-page-data .second-page-data-row .search-section .grid-search img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+.container .second-page .second-page-data .second-page-data-row .add-quotes {
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container .second-page .second-page-data .second-page-data-row .add-quotes h3 {
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 8px 15px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+.container .second-page .second-page-data .second-page-data-row .add-quotes .add-img {
+  width: 65px;
+  display: flex;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 0px #465AE3);
+}
+.container .second-page .second-page-data .second-page-data-row .add-quotes .quotes-box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 700px;
+  overflow-y: auto;
+  padding-bottom: 150px;
+}
+.container .second-page .second-page-data .second-page-data-row .add-quotes .quotes-box .quote-data {
+  background: url(../images/papercut.png);
+  background-size: cover;
+  background-position: center;
+  margin: 5px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: translateY(10px) scale(0.98);
+  transition: all 0.35s ease;
+  flex-basis: 46%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.container .second-page .second-page-data .second-page-data-row .add-quotes .quotes-box .quote-data p {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 15px;
+}
+.container .second-page .second-page-data .second-page-data-row .add-quotes .quotes-box .quote-data.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.container .second-page .second-page-data .notification-box {
+  padding: 25px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 150px;
+}
+.container .second-page .second-page-data .notification-box .notification-box-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  margin-top: 10px;
+}
+.container .second-page .second-page-data .notification-box .notification-box-data small {
+  display: block;
+  width: 100%;
+}
+.container .second-page .second-page-data .notification-box .notification-box-data .notification-box-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid #405de6;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .second-page .second-page-data .notification-box .notification-box-data .notification-content-img {
+  width: 80px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .second-page .second-page-data .user-profile {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 150px;
+}
+.container .second-page .second-page-data .user-profile .user-profile-top {
+  width: 100%;
+  height: 150px;
+  background: url(../images/cover.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.container .second-page .second-page-data .user-profile .user-profile-top .profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 4px solid #405de6;
+  padding: 4px;
+  margin-top: 100px;
+  margin-left: 20px;
+}
+.container .second-page .second-page-data .user-profile .user-profile-top i.check {
+  font-size: 30px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #405de6;
+  position: absolute;
+  top: 130px;
+  left: 100px;
+}
+.container .second-page .second-page-data .user-profile .user-profile-top button {
+  background-color: #405de6;
+  color: white;
+  border-radius: 35px;
+  border: none;
+  padding: 7px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  font-size: 12px;
+  position: absolute;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3);
+}
+.container .second-page .second-page-data .user-profile .user-profile-top .button-1 {
+  left: 140px;
+  top: 160px;
+}
+.container .second-page .second-page-data .user-profile .user-profile-top .button-2 {
+  left: 250px;
+  top: 160px;
+}
+.container .second-page .second-page-data .user-profile .user-profile-top .button-3 {
+  left: 250px;
+  top: 200px;
+  background-color: crimson;
+}
+.container .second-page .second-page-data .user-profile .user-data {
+  padding: 70px 25px 15px 25px;
+}
+.container .second-page .second-page-data .user-profile .fb-story {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  margin-left: 25px;
+}
+.container .second-page .second-page-data .user-profile .fb-story img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid #405de6;
+  padding: 3px;
+}
+.container .second-page .second-page-data .user-profile .fb-posts {
+  padding: 15px;
+}
+.container .second-page .second-page-data .user-profile .fb-posts h3 {
+  background-color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.171);
+}
+.container .second-page .second-page-data .user-profile .fb-posts .fb-posts-data {
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.171);
+  padding-bottom: 15px;
+  border-radius: 15px;
+}
+.container .second-page .second-page-data .user-profile .fb-posts .fb-posts-data .fb-posts-data-top {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+.container .second-page .second-page-data .user-profile .fb-posts .fb-posts-data .fb-posts-data-top .profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 4px;
+  border: 3px solid #405de6;
+}
+.container .second-page .second-page-data .user-profile .fb-posts .fb-posts-data .fb-posts {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.container .second-page .second-page-data .second-page-data-row.active {
+  display: block;
+}
+.container .second-page .second-page-data .insta-features-data-row {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 80%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 15px;
+  border-radius: 35px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .second-page .second-page-data .insta-features-data-row .features {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .second-page .second-page-data .insta-features-data-row .features i {
+  font-size: 25px;
+}
+.container .second-page .second-page-data .insta-features-data-row .features.active {
+  background-color: crimson;
+}
+.container .second-page .second-page-data .insta-features-data-row .features.active i {
+  color: white;
+}
+
+@media screen and (max-width: 450px) {
+  .container .second-page .second-page-data .second-page-data-row .trigger-features.home-section .story-swiper .swiper-slide img {
+    width: 65px;
+    height: 65px;
+  }
+}/*# sourceMappingURL=style.css.map */
